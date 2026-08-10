@@ -1,0 +1,136 @@
+:root {
+    --bg-color: #f0f4f8;
+    --card-bg: #ffffff;
+    --text-main: #1a202c;
+    --text-muted: #718096;
+    --accent: #3182ce;
+    --error-bg: #fed7d7;
+    --error-text: #c53030;
+    --success: #48bb78;
+    --radius: 12px;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    padding: 2rem 1rem;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.error {
+    background-color: var(--error-bg);
+    color: var(--error-text);
+    padding: 1rem;
+    border-radius: var(--radius);
+    margin-bottom: 1.5rem;
+    border-left: 4px solid var(--error-text);
+}
+
+.welcome {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.welcome code {
+    background: #edf2f7;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-family: monospace;
+}
+
+.current-weather {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.current-weather h2 {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+}
+
+.temp-huge {
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin: 0.5rem 0;
+}
+
+.meta {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+h3 {
+    margin-bottom: 1rem;
+    font-size: 1.15rem;
+    color: var(--text-main);
+}
+
+.forecast-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.forecast-card {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.forecast-date {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-main);
+}
+
+.forecast-temps {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.max-temp {
+    color: #c53030;
+    font-weight: 600;
+}
+
+.min-temp {
+    color: #3182ce;
+    font-weight: 600;
+}
+
+@media (max-width: 480px) {
+    .temp-huge {
+        font-size: 3rem;
+    }
+    
+    .forecast-temps {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+}
